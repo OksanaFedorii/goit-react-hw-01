@@ -1,8 +1,8 @@
 import css from './Profile.module.css';
 
-export default function Profile({
-    userData: { username, tag, location, avatar, stats },
-}) {
+const defaultavatar = "https://cdn-icons-png.flaticon.com/512/2922/2922506.png"
+
+export default function Profile({username, tag, location, avatar = defaultavatar, stats}) {
     return (
         <div className={css.profile}>
             <img className={css.avatar} src={avatar} alt={`${username} avatar`} />
@@ -17,4 +17,5 @@ export default function Profile({
         </div>
     );
 }
+
 
